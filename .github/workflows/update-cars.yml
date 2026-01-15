@@ -75,7 +75,15 @@ jobs:
                           "$($("{0:N0}" -f [int]$doc.mileage -replace ',', ' ')) km"
                       } else { "Ukjent" }
                       
-                      $price = if ($doc.price) { [int]$doc.price } else { 0 }
+                      # Håndter pris som objekt eller tall
+                      $price = 0
+                      if ($doc.price) {
+                          if ($doc.price -is [PSCustomObject] -and $doc.price.amount) {
+                              $price = [int]$doc.price.amount
+                          } else {
+                              $price = [int]$doc.price
+                          }
+                      }
                       $priceFormatted = "{0:N0}" -f $price -replace ",", " "
                       
                       $imageUrl = if ($doc.image -and $doc.image.url) {
