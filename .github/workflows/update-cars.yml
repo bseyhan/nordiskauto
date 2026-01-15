@@ -1,0 +1,149 @@
+name: Update Cars from Finn.no
+
+on:
+  # Kjør 2x daglig norsk tid: 08:00 og 17:00
+  schedule:
+    - cron: '0 7,16 * * *'
+  
+  # Manuell kjøring
+  workflow_dispatch:
+  
+  # Ved push til main (for testing)
+  push:
+    branches:
+      - main
+    paths:
+      - 'fetch-cars.ps1'
+
+jobs:
+  update-cars:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Fetch cars from Finn.no API
+        shell: pwsh
+        run: |
+          $orgId = "1031027521"
+          $apiUrl = "https://www.finn.no/api/search-qf?searchkey=SEARCH_ID_CAR_USED&orgId=$orgId&vertical=car"
+          $outputPath = "data/cars.json"
+          
+          Write-Host "Henter biler fra Finn.no API..." -ForegroundColor Cyan
+          
+          try {
+              $headers = @{
+                  "Accept" = "application/json"
+                  "User-Agent" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+              }
+              
+              $response = Invoke-RestMethod -Uri $apiUrl -Method Get -Headers $headers
+              
+              if ($response.docs -and $response.docs.Count -gt 0) {
+                  $cars = @()
+                  
+                  foreach ($doc in $response.docs) {
+                      $heading = $doc.heading
+                      $brand = if ($doc.make) { $doc.make } else { ($heading -split ' ')[0] }
+                      $model = if ($doc.model) { $doc.model } else { $heading -replace "^$brand\s*", "" }
+                      
+                      $fuelType = $doc.fuel
+                      
+                      $filterType = switch -Regex ($fuelType) {
+                          "^El$|^Elektrisk$|^Electric$" { "el" }
+                          "Hybrid|Plug-in|PHEV|plugin_hybrid|hybrid_petrol|hybrid_diesel" { "hybrid" }
+                          "^Bensin$|^Petrol$" { "bensin" }
+                          "^Diesel$" { "diesel" }
+                          default { "bensin" }
+                      }
+                      
+                      if ($filterType -eq "el") { $fuelType = "Elektrisk" }
+                      
+                      if (-not $fuelType) {
+                          if ($heading -match "EV|Electric|Elektrisk|e-tron|ID\.|EQS|EQE|EQA|EQB|EQC|iX|i4|i7|Model\s?[SX3Y]|Leaf|Zoe|Kona\s?EV|e-Niro|e-Soul|Taycan|Mustang\s?Mach|Ioniq\s?5|Ioniq\s?6|EV6|Enyaq|Born|ID\.3|ID\.4|ID\.5") {
+                              $filterType = "el"
+                              $fuelType = "Elektrisk"
+                          }
+                      }
+                      
+                      $mileage = if ($doc.mileage) {
+                          "{0:N0}" -f [int]$doc.mileage -replace ",", " "
+                          "$($("{0:N0}" -f [int]$doc.mileage -replace ',', ' ')) km"
+                      } else { "Ukjent" }
+                      
+                      $price = if ($doc.price) { [int]$doc.price } else { 0 }
+                      $priceFormatted = "{0:N0}" -f $price -replace ",", " "
+                      
+                      $imageUrl = if ($doc.image -and $doc.image.url) {
+                          $doc.image.url -replace "rule=.*$", "rule=mw_480"
+                      } elseif ($doc.images -and $doc.images.Count -gt 0) {
+                          $doc.images[0].url -replace "rule=.*$", "rule=mw_480"
+                      } else {
+                          "assets/images/placeholder.jpg"
+                      }
+                      
+                      $cars += @{
+                          id = $doc.id
+                          brand = $brand
+                          title = $heading
+                          year = if ($doc.year) { $doc.year } else { "Ukjent" }
+                          mileage = $mileage
+                          fuelType = $fuelType
+                          filterType = $filterType
+                          price = $price
+                          priceFormatted = $priceFormatted
+                          image = $imageUrl
+                          finnUrl = "https://www.finn.no/mobility/car/ad.html?finnkode=$($doc.id)"
+                      }
+                  }
+                  
+                  # Beregn statistikk
+                  $stats = @{
+                      total = $cars.Count
+                      electric = ($cars | Where-Object { $_.filterType -eq "el" }).Count
+                      hybrid = ($cars | Where-Object { $_.filterType -eq "hybrid" }).Count
+                      petrol = ($cars | Where-Object { $_.filterType -eq "bensin" }).Count
+                      diesel = ($cars | Where-Object { $_.filterType -eq "diesel" }).Count
+                  }
+                  
+                  $output = @{
+                      lastUpdated = (Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ")
+                      stats = $stats
+                      cars = $cars
+                  }
+                  
+                  # Opprett data-mappe hvis den ikke finnes
+                  if (-not (Test-Path "data")) {
+                      New-Item -ItemType Directory -Path "data" -Force
+                  }
+                  
+                  $output | ConvertTo-Json -Depth 10 | Set-Content -Path $outputPath -Encoding UTF8
+                  
+                  Write-Host "Lagret $($cars.Count) biler til $outputPath" -ForegroundColor Green
+                  Write-Host "Statistikk: El: $($stats.electric), Hybrid: $($stats.hybrid), Bensin: $($stats.petrol), Diesel: $($stats.diesel)" -ForegroundColor Cyan
+              } else {
+                  Write-Host "Ingen biler funnet i API-respons" -ForegroundColor Yellow
+                  exit 1
+              }
+          } catch {
+              Write-Host "Feil ved henting av data: $_" -ForegroundColor Red
+              exit 1
+          }
+      
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet data/cars.json || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/cars.json
+          git commit -m "🚗 Oppdatert biler fra Finn.no - $(date +'%Y-%m-%d %H:%M')"
+          git push
