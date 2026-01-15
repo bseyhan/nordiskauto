@@ -134,7 +134,7 @@ nav a:hover::after { width: 100%; }
     align-items: center;
     text-align: center;
     position: relative;
-    background: url('../assets/images/hero-bg.jpg') center center / cover no-repeat;
+    background: url('../assets/images/hero-bg.jpg?v=2') center center / cover no-repeat;
     overflow: hidden;
 }
 
@@ -767,9 +767,9 @@ nav a:hover::after { width: 100%; }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 4rem;
-    max-width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -814,6 +814,15 @@ nav a:hover::after { width: 100%; }
     color: var(--color-accent);
 }
 
+.contact-icon.facebook {
+    background: #1877F2;
+    border-color: #1877F2;
+}
+
+.contact-icon.facebook svg {
+    color: white;
+}
+
 .contact-item-content h4 {
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -834,6 +843,54 @@ nav a:hover::after { width: 100%; }
 
 .contact-item-content a:hover {
     color: var(--color-accent);
+}
+
+/* Contact Hours */
+.contact-hours {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    padding: 2.5rem;
+    min-width: 320px;
+}
+
+.contact-hours h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hours-row .day {
+    color: var(--color-light);
+    font-weight: 500;
+}
+
+.hours-row .time {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.hours-row.closed .time {
+    color: var(--color-muted);
+}
+
+.hours-note {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    font-style: italic;
 }
 
 /* Contact Form */
