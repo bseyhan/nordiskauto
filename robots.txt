@@ -1,0 +1,10 @@
+# Nordisk Auto AS - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nordiskauto.no/sitemap.xml
+
+# Block unnecessary files
+Disallow: /*.json$
+Disallow: /fetch-cars.ps1
