@@ -157,4 +157,5 @@ jobs:
           git config user.email "actions@github.com"
           git add data/cars.json
           git commit -m "🚗 Oppdatert biler fra Finn.no - $(date +'%Y-%m-%d %H:%M')"
+          git pull --rebase
           git push
