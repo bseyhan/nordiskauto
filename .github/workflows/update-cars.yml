@@ -108,7 +108,7 @@ jobs:
                           price = $price
                           priceFormatted = $priceFormatted
                           image = $imageUrl
-                          finnUrl = "https://www.finn.no/mobility/car/ad.html?finnkode=$($doc.id)"
+                          finnUrl = "https://www.finn.no/mobility/item/$($doc.id)"
                       }
                   }
                   
