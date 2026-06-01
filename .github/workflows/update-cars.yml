@@ -24,13 +24,15 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       
       - name: Fetch cars from Finn.no API
         shell: pwsh
         run: |
           $orgId = "1031027521"
-          $apiUrl = "https://www.finn.no/api/search-qf?searchkey=SEARCH_ID_CAR_USED&orgId=$orgId&vertical=car"
+          # Finn.no flyttet søke-APIet fra /api/search-qf (returnerer nå 404)
+          # til /mobility/search/api/search/{searchKey}. searchKey ligger i stien.
+          $apiUrl = "https://www.finn.no/mobility/search/api/search/SEARCH_ID_CAR_USED?orgId=$orgId"
           $outputPath = "data/cars.json"
           
           Write-Host "Henter biler fra Finn.no API..." -ForegroundColor Cyan
