@@ -1,428 +1,460 @@
 {
-  "lastUpdated": "2026-10-09T07:11:28Z",
+  "stats": {
+    "electric": 9,
+    "hybrid": 5,
+    "petrol": 4,
+    "diesel": 10,
+    "total": 28
+  },
+  "lastUpdated": "2026-10-09T16:01:46Z",
   "cars": [
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/477937979/73d200d1-0fc6-4dba-ab07-b4ab0caed041",
+      "price": 149000,
+      "fuelType": "Elektrisk",
+      "brand": "Volkswagen",
+      "image": "https://images.finncdn.no/dynamic/default/item/478328702/6450479d-0a5e-4f72-967d-399d991e8a17",
+      "mileage": [
+        "54 300",
+        "54 300 km"
+      ],
+      "id": "478328702",
+      "title": "Volkswagen e-Golf VII",
+      "year": 2019,
+      "filterType": "el",
+      "priceFormatted": "149 000",
+      "finnUrl": "https://www.finn.no/mobility/item/478328702"
+    },
+    {
+      "price": 27900,
+      "fuelType": "Bensin",
+      "brand": "Peugeot",
+      "image": "https://images.finncdn.no/dynamic/default/item/478297591/a0b68d18-aa20-4864-bb0b-63267b886f3b",
+      "mileage": [
+        "93 000",
+        "93 000 km"
+      ],
+      "id": "478297591",
+      "title": "Peugeot 107",
+      "year": 2009,
+      "filterType": "bensin",
+      "priceFormatted": "27 900",
+      "finnUrl": "https://www.finn.no/mobility/item/478297591"
+    },
+    {
       "price": 599900,
+      "fuelType": "Plug-in Bensin",
+      "brand": "BMW",
+      "image": "https://images.finncdn.no/dynamic/default/item/477937979/73d200d1-0fc6-4dba-ab07-b4ab0caed041",
       "mileage": [
         "73 000",
         "73 000 km"
       ],
-      "title": "BMW X5",
-      "finnUrl": "https://www.finn.no/mobility/item/477937979",
       "id": "477937979",
-      "brand": "BMW",
-      "fuelType": "Plug-in Bensin",
+      "title": "BMW X5",
       "year": 2020,
       "filterType": "hybrid",
-      "priceFormatted": "599 900"
+      "priceFormatted": "599 900",
+      "finnUrl": "https://www.finn.no/mobility/item/477937979"
     },
     {
+      "price": 349900,
+      "fuelType": "Elektrisk",
+      "brand": "Tesla",
       "image": "https://images.finncdn.no/dynamic/default/item/477817306/9d9d7f34-b275-4e4e-96ea-9c6fa6a08679",
-      "price": 354900,
       "mileage": [
         "76 000",
         "76 000 km"
       ],
-      "title": "Tesla Model Y",
-      "finnUrl": "https://www.finn.no/mobility/item/477817306",
       "id": "477817306",
-      "brand": "Tesla",
-      "fuelType": "Elektrisk",
+      "title": "Tesla Model Y",
       "year": 2022,
       "filterType": "el",
-      "priceFormatted": "354 900"
+      "priceFormatted": "349 900",
+      "finnUrl": "https://www.finn.no/mobility/item/477817306"
     },
     {
+      "price": 299900,
+      "fuelType": "Elektrisk",
+      "brand": "Skoda",
       "image": "https://images.finncdn.no/dynamic/default/item/477727538/cc66814b-6527-4413-ba0b-4785328ff53b",
-      "price": 304900,
       "mileage": [
         "98 310",
         "98 310 km"
       ],
-      "title": "Skoda Enyaq",
-      "finnUrl": "https://www.finn.no/mobility/item/477727538",
       "id": "477727538",
-      "brand": "Skoda",
-      "fuelType": "Elektrisk",
+      "title": "Skoda Enyaq",
       "year": 2022,
       "filterType": "el",
-      "priceFormatted": "304 900"
+      "priceFormatted": "299 900",
+      "finnUrl": "https://www.finn.no/mobility/item/477727538"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/477659686/e83753a4-916f-40a5-a5dd-58e10fc48358",
       "price": 119900,
+      "fuelType": "Elektrisk",
+      "brand": "Nissan",
+      "image": "https://images.finncdn.no/dynamic/default/item/477659686/e83753a4-916f-40a5-a5dd-58e10fc48358",
       "mileage": [
         "125 870",
         "125 870 km"
       ],
-      "title": "Nissan Leaf",
-      "finnUrl": "https://www.finn.no/mobility/item/477659686",
       "id": "477659686",
-      "brand": "Nissan",
-      "fuelType": "Elektrisk",
+      "title": "Nissan Leaf",
       "year": 2020,
       "filterType": "el",
-      "priceFormatted": "119 900"
+      "priceFormatted": "119 900",
+      "finnUrl": "https://www.finn.no/mobility/item/477659686"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/476990982/1ed8e3ad-5152-4062-a98e-c5f49bcd6fc1",
       "price": 389900,
+      "fuelType": "Plug-in Bensin",
+      "brand": "Volvo",
+      "image": "https://images.finncdn.no/dynamic/default/item/476990982/1ed8e3ad-5152-4062-a98e-c5f49bcd6fc1",
       "mileage": [
         "124 500",
         "124 500 km"
       ],
-      "title": "Volvo XC90",
-      "finnUrl": "https://www.finn.no/mobility/item/476990982",
       "id": "476990982",
-      "brand": "Volvo",
-      "fuelType": "Plug-in Bensin",
+      "title": "Volvo XC90",
       "year": 2017,
       "filterType": "hybrid",
-      "priceFormatted": "389 900"
+      "priceFormatted": "389 900",
+      "finnUrl": "https://www.finn.no/mobility/item/476990982"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/476209040/ad127d6c-b3b8-42db-9a4a-53bea26a6741",
       "price": 66900,
+      "fuelType": "Diesel",
+      "brand": "Skoda",
+      "image": "https://images.finncdn.no/dynamic/default/item/476209040/ad127d6c-b3b8-42db-9a4a-53bea26a6741",
       "mileage": [
         "224 000",
         "224 000 km"
       ],
-      "title": "Skoda Octavia",
-      "finnUrl": "https://www.finn.no/mobility/item/476209040",
       "id": "476209040",
-      "brand": "Skoda",
-      "fuelType": "Diesel",
+      "title": "Skoda Octavia",
       "year": 2015,
       "filterType": "diesel",
-      "priceFormatted": "66 900"
+      "priceFormatted": "66 900",
+      "finnUrl": "https://www.finn.no/mobility/item/476209040"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/476069596/9b0ecd09-e974-4e0f-b04d-8dd770fbd63a",
       "price": 130000,
+      "fuelType": "Diesel",
+      "brand": "Mercedes-Benz",
+      "image": "https://images.finncdn.no/dynamic/default/item/476069596/9b0ecd09-e974-4e0f-b04d-8dd770fbd63a",
       "mileage": [
         "339 500",
         "339 500 km"
       ],
-      "title": "Mercedes-Benz E220 d",
-      "finnUrl": "https://www.finn.no/mobility/item/476069596",
       "id": "476069596",
-      "brand": "Mercedes-Benz",
-      "fuelType": "Diesel",
+      "title": "Mercedes-Benz E220 d",
       "year": 2017,
       "filterType": "diesel",
-      "priceFormatted": "130 000"
+      "priceFormatted": "130 000",
+      "finnUrl": "https://www.finn.no/mobility/item/476069596"
     },
     {
+      "price": 308000,
+      "fuelType": "Elektrisk",
+      "brand": "Volkswagen",
       "image": "https://images.finncdn.no/dynamic/default/item/475185495/7d2b3b9e-a29f-4e7b-b841-eb3459fa1d8e",
-      "price": 289000,
       "mileage": [
         "108 200",
         "108 200 km"
       ],
-      "title": "Volkswagen ID. Buzz",
-      "finnUrl": "https://www.finn.no/mobility/item/475185495",
       "id": "475185495",
-      "brand": "Volkswagen",
-      "fuelType": "Elektrisk",
+      "title": "Volkswagen ID. Buzz",
       "year": 2023,
       "filterType": "el",
-      "priceFormatted": "289 000"
+      "priceFormatted": "308 000",
+      "finnUrl": "https://www.finn.no/mobility/item/475185495"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/474990159/dfde9656-0097-425b-8d14-ffabc4e0b7a2",
       "price": 153000,
+      "fuelType": "Bensin",
+      "brand": "Peugeot",
+      "image": "https://images.finncdn.no/dynamic/default/item/474990159/dfde9656-0097-425b-8d14-ffabc4e0b7a2",
       "mileage": [
         "120 000",
         "120 000 km"
       ],
-      "title": "Peugeot 3008",
-      "finnUrl": "https://www.finn.no/mobility/item/474990159",
       "id": "474990159",
-      "brand": "Peugeot",
-      "fuelType": "Bensin",
+      "title": "Peugeot 3008",
       "year": 2017,
       "filterType": "bensin",
-      "priceFormatted": "153 000"
+      "priceFormatted": "153 000",
+      "finnUrl": "https://www.finn.no/mobility/item/474990159"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/473520715/cbfc90d1-26f4-4d6b-916f-a8d88b6446be",
       "price": 359900,
+      "fuelType": "Diesel",
+      "brand": "Volvo",
+      "image": "https://images.finncdn.no/dynamic/default/item/473520715/cbfc90d1-26f4-4d6b-916f-a8d88b6446be",
       "mileage": [
         "193 500",
         "193 500 km"
       ],
-      "title": "Volvo V90 Cross Country",
-      "finnUrl": "https://www.finn.no/mobility/item/473520715",
       "id": "473520715",
-      "brand": "Volvo",
-      "fuelType": "Diesel",
+      "title": "Volvo V90 Cross Country",
       "year": 2018,
       "filterType": "diesel",
-      "priceFormatted": "359 900"
+      "priceFormatted": "359 900",
+      "finnUrl": "https://www.finn.no/mobility/item/473520715"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/472795815/4a6c6d3d-263f-46f0-a064-731b116660e5",
       "price": 165900,
+      "fuelType": "Hybrid bensin",
+      "brand": "Toyota",
+      "image": "https://images.finncdn.no/dynamic/default/item/472795815/4a6c6d3d-263f-46f0-a064-731b116660e5",
       "mileage": [
         "171 900",
         "171 900 km"
       ],
-      "title": "Toyota Prius+",
-      "finnUrl": "https://www.finn.no/mobility/item/472795815",
       "id": "472795815",
-      "brand": "Toyota",
-      "fuelType": "Hybrid bensin",
+      "title": "Toyota Prius+",
       "year": 2017,
       "filterType": "hybrid",
-      "priceFormatted": "165 900"
+      "priceFormatted": "165 900",
+      "finnUrl": "https://www.finn.no/mobility/item/472795815"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/472407090/c98b086f-5377-4dd7-9609-2e0d0cfd4ff7",
       "price": 229000,
+      "fuelType": "Diesel",
+      "brand": "Ford",
+      "image": "https://images.finncdn.no/dynamic/default/item/472407090/c98b086f-5377-4dd7-9609-2e0d0cfd4ff7",
       "mileage": [
         "168 500",
         "168 500 km"
       ],
-      "title": "Ford S-MAX",
-      "finnUrl": "https://www.finn.no/mobility/item/472407090",
       "id": "472407090",
-      "brand": "Ford",
-      "fuelType": "Diesel",
+      "title": "Ford S-MAX",
       "year": 2019,
       "filterType": "diesel",
-      "priceFormatted": "229 000"
+      "priceFormatted": "229 000",
+      "finnUrl": "https://www.finn.no/mobility/item/472407090"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/467884950/a90d27a9-66c4-4cdb-a7bf-01a10fe3a9e5",
       "price": 209900,
+      "fuelType": "Elektrisk",
+      "brand": "Kia",
+      "image": "https://images.finncdn.no/dynamic/default/item/467884950/a90d27a9-66c4-4cdb-a7bf-01a10fe3a9e5",
       "mileage": [
         "87 500",
         "87 500 km"
       ],
-      "title": "Kia e-Niro",
-      "finnUrl": "https://www.finn.no/mobility/item/467884950",
       "id": "467884950",
-      "brand": "Kia",
-      "fuelType": "Elektrisk",
+      "title": "Kia e-Niro",
       "year": 2021,
       "filterType": "el",
-      "priceFormatted": "209 900"
+      "priceFormatted": "209 900",
+      "finnUrl": "https://www.finn.no/mobility/item/467884950"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/467695104/8b7d8e56-bca1-47fb-947c-99a3a48b7332",
       "price": 86900,
+      "fuelType": "Diesel",
+      "brand": "Volkswagen",
+      "image": "https://images.finncdn.no/dynamic/default/item/467695104/8b7d8e56-bca1-47fb-947c-99a3a48b7332",
       "mileage": [
         "195 000",
         "195 000 km"
       ],
-      "title": "Volkswagen Tiguan",
-      "finnUrl": "https://www.finn.no/mobility/item/467695104",
       "id": "467695104",
-      "brand": "Volkswagen",
-      "fuelType": "Diesel",
+      "title": "Volkswagen Tiguan",
       "year": 2012,
       "filterType": "diesel",
-      "priceFormatted": "86 900"
+      "priceFormatted": "86 900",
+      "finnUrl": "https://www.finn.no/mobility/item/467695104"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/467694955/d02323d0-9028-4346-a015-29c82d77e3d2",
       "price": 415000,
+      "fuelType": "Diesel",
+      "brand": "BMW",
+      "image": "https://images.finncdn.no/dynamic/default/item/467694955/d02323d0-9028-4346-a015-29c82d77e3d2",
       "mileage": [
         "119 800",
         "119 800 km"
       ],
-      "title": "BMW X4",
-      "finnUrl": "https://www.finn.no/mobility/item/467694955",
       "id": "467694955",
-      "brand": "BMW",
-      "fuelType": "Diesel",
+      "title": "BMW X4",
       "year": 2019,
       "filterType": "diesel",
-      "priceFormatted": "415 000"
+      "priceFormatted": "415 000",
+      "finnUrl": "https://www.finn.no/mobility/item/467694955"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/467694673/bc35e996-ce1b-48d6-8d42-879af6c661be",
       "price": 139000,
+      "fuelType": "Hybrid bensin",
+      "brand": "Kia",
+      "image": "https://images.finncdn.no/dynamic/default/item/467694673/bc35e996-ce1b-48d6-8d42-879af6c661be",
       "mileage": [
         "148 900",
         "148 900 km"
       ],
-      "title": "Kia Niro",
-      "finnUrl": "https://www.finn.no/mobility/item/467694673",
       "id": "467694673",
-      "brand": "Kia",
-      "fuelType": "Hybrid bensin",
+      "title": "Kia Niro",
       "year": 2018,
       "filterType": "hybrid",
-      "priceFormatted": "139 000"
+      "priceFormatted": "139 000",
+      "finnUrl": "https://www.finn.no/mobility/item/467694673"
     },
     {
+      "price": 109900,
+      "fuelType": "Diesel",
+      "brand": "Volkswagen",
       "image": "https://images.finncdn.no/dynamic/default/item/467694516/60967e46-3be8-4112-bf8d-315dbaab32ef",
-      "price": 115900,
       "mileage": [
         "138 000",
         "138 000 km"
       ],
-      "title": "Volkswagen Passat",
-      "finnUrl": "https://www.finn.no/mobility/item/467694516",
       "id": "467694516",
-      "brand": "Volkswagen",
-      "fuelType": "Diesel",
+      "title": "Volkswagen Passat",
       "year": 2016,
       "filterType": "diesel",
-      "priceFormatted": "115 900"
+      "priceFormatted": "109 900",
+      "finnUrl": "https://www.finn.no/mobility/item/467694516"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/467694249/e37fbe89-c5a9-46e7-b3c2-6693325b54cc",
       "price": 149999,
+      "fuelType": "Bensin",
+      "brand": "Mercedes-Benz",
+      "image": "https://images.finncdn.no/dynamic/default/item/467694249/e37fbe89-c5a9-46e7-b3c2-6693325b54cc",
       "mileage": [
         "150 300",
         "150 300 km"
       ],
-      "title": "Mercedes-Benz GLA200",
-      "finnUrl": "https://www.finn.no/mobility/item/467694249",
       "id": "467694249",
-      "brand": "Mercedes-Benz",
-      "fuelType": "Bensin",
+      "title": "Mercedes-Benz GLA200",
       "year": 2015,
       "filterType": "bensin",
-      "priceFormatted": "149 999"
+      "priceFormatted": "149 999",
+      "finnUrl": "https://www.finn.no/mobility/item/467694249"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/item/465723606/6b33e179-2c1e-452a-beaa-982845a89f01",
       "price": 49900,
+      "fuelType": "Diesel",
+      "brand": "Toyota",
+      "image": "https://images.finncdn.no/dynamic/default/item/465723606/6b33e179-2c1e-452a-beaa-982845a89f01",
       "mileage": [
         "297 500",
         "297 500 km"
       ],
-      "title": "Toyota Avensis",
-      "finnUrl": "https://www.finn.no/mobility/item/465723606",
       "id": "465723606",
-      "brand": "Toyota",
-      "fuelType": "Diesel",
+      "title": "Toyota Avensis",
       "year": 2009,
       "filterType": "diesel",
-      "priceFormatted": "49 900"
+      "priceFormatted": "49 900",
+      "finnUrl": "https://www.finn.no/mobility/item/465723606"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/2024/10/vertical-3/19/9/376/363/699_725a5275-e540-44ab-a9d1-732d19d06f69.jpg",
       "price": 773000,
+      "fuelType": "Elektrisk",
+      "brand": "Porsche",
+      "image": "https://images.finncdn.no/dynamic/default/2024/10/vertical-3/19/9/376/363/699_725a5275-e540-44ab-a9d1-732d19d06f69.jpg",
       "mileage": [
         "59 000",
         "59 000 km"
       ],
-      "title": "Porsche Taycan",
-      "finnUrl": "https://www.finn.no/mobility/item/376363699",
       "id": "376363699",
-      "brand": "Porsche",
-      "fuelType": "Elektrisk",
+      "title": "Porsche Taycan",
       "year": 2020,
       "filterType": "el",
-      "priceFormatted": "773 000"
+      "priceFormatted": "773 000",
+      "finnUrl": "https://www.finn.no/mobility/item/376363699"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/2025/9/vertical-3/15/0/370/708/550_f33e1f08-6569-4d03-8930-9c5ce13e163c.jpg",
       "price": 149000,
+      "fuelType": "Hybrid bensin",
+      "brand": "Kia",
+      "image": "https://images.finncdn.no/dynamic/default/2025/9/vertical-3/15/0/370/708/550_f33e1f08-6569-4d03-8930-9c5ce13e163c.jpg",
       "mileage": [
         "148 900",
         "148 900 km"
       ],
-      "title": "Kia Niro",
-      "finnUrl": "https://www.finn.no/mobility/item/370708550",
       "id": "370708550",
-      "brand": "Kia",
-      "fuelType": "Hybrid bensin",
+      "title": "Kia Niro",
       "year": 2018,
       "filterType": "hybrid",
-      "priceFormatted": "149 000"
+      "priceFormatted": "149 000",
+      "finnUrl": "https://www.finn.no/mobility/item/370708550"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/2024/8/vertical-3/28/3/368/057/963_b94b9a9b-9708-43dc-bbad-b8ec08bb665f.jpg",
       "price": 154900,
+      "fuelType": "Diesel",
+      "brand": "Volkswagen",
+      "image": "https://images.finncdn.no/dynamic/default/2024/8/vertical-3/28/3/368/057/963_b94b9a9b-9708-43dc-bbad-b8ec08bb665f.jpg",
       "mileage": [
         "138 000",
         "138 000 km"
       ],
-      "title": "Volkswagen Passat",
-      "finnUrl": "https://www.finn.no/mobility/item/368057963",
       "id": "368057963",
-      "brand": "Volkswagen",
-      "fuelType": "Diesel",
+      "title": "Volkswagen Passat",
       "year": 2016,
       "filterType": "diesel",
-      "priceFormatted": "154 900"
+      "priceFormatted": "154 900",
+      "finnUrl": "https://www.finn.no/mobility/item/368057963"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/2024/6/vertical-3/04/0/355/739/830_85624e77-9a65-4b48-ba46-2783506665de.jpg",
       "price": 99000,
+      "fuelType": "Diesel",
+      "brand": "Volkswagen",
+      "image": "https://images.finncdn.no/dynamic/default/2024/6/vertical-3/04/0/355/739/830_85624e77-9a65-4b48-ba46-2783506665de.jpg",
       "mileage": [
         "195 000",
         "195 000 km"
       ],
-      "title": "Volkswagen Tiguan",
-      "finnUrl": "https://www.finn.no/mobility/item/355739830",
       "id": "355739830",
-      "brand": "Volkswagen",
-      "fuelType": "Diesel",
+      "title": "Volkswagen Tiguan",
       "year": 2012,
       "filterType": "diesel",
-      "priceFormatted": "99 000"
+      "priceFormatted": "99 000",
+      "finnUrl": "https://www.finn.no/mobility/item/355739830"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/2024/6/vertical-3/25/4/351/322/604_583d8174-7bc5-4548-988d-ec3b7c6e0bdc.jpg",
       "price": 149000,
+      "fuelType": "Bensin",
+      "brand": "BMW",
+      "image": "https://images.finncdn.no/dynamic/default/2024/6/vertical-3/25/4/351/322/604_583d8174-7bc5-4548-988d-ec3b7c6e0bdc.jpg",
       "mileage": [
         "112 000",
         "112 000 km"
       ],
-      "title": "BMW 316i",
-      "finnUrl": "https://www.finn.no/mobility/item/351322604",
       "id": "351322604",
-      "brand": "BMW",
-      "fuelType": "Bensin",
+      "title": "BMW 316i",
       "year": 2014,
       "filterType": "bensin",
-      "priceFormatted": "149 000"
+      "priceFormatted": "149 000",
+      "finnUrl": "https://www.finn.no/mobility/item/351322604"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/2024/3/vertical-3/28/5/345/939/685_f2edd6a9-7966-4a03-9150-81b69e3aa4e8.jpg",
       "price": 179000,
+      "fuelType": "Elektrisk",
+      "brand": "Opel",
+      "image": "https://images.finncdn.no/dynamic/default/2024/3/vertical-3/28/5/345/939/685_f2edd6a9-7966-4a03-9150-81b69e3aa4e8.jpg",
       "mileage": [
         "74 000",
         "74 000 km"
       ],
-      "title": "Opel Ampera",
-      "finnUrl": "https://www.finn.no/mobility/item/345939685",
       "id": "345939685",
-      "brand": "Opel",
-      "fuelType": "Elektrisk",
+      "title": "Opel Ampera",
       "year": 2018,
       "filterType": "el",
-      "priceFormatted": "179 000"
+      "priceFormatted": "179 000",
+      "finnUrl": "https://www.finn.no/mobility/item/345939685"
     },
     {
-      "image": "https://images.finncdn.no/dynamic/default/2022/10/vertical-3/13/3/253/235/943_657483874.jpg",
       "price": 154900,
+      "fuelType": "Elektrisk",
+      "brand": "BMW",
+      "image": "https://images.finncdn.no/dynamic/default/2022/10/vertical-3/13/3/253/235/943_657483874.jpg",
       "mileage": [
         "65 500",
         "65 500 km"
       ],
-      "title": "BMW i3",
-      "finnUrl": "https://www.finn.no/mobility/item/276870149",
       "id": "276870149",
-      "brand": "BMW",
-      "fuelType": "Elektrisk",
+      "title": "BMW i3",
       "year": 2017,
       "filterType": "el",
-      "priceFormatted": "154 900"
+      "priceFormatted": "154 900",
+      "finnUrl": "https://www.finn.no/mobility/item/276870149"
     }
-  ],
-  "stats": {
-    "hybrid": 5,
-    "electric": 8,
-    "petrol": 3,
-    "diesel": 10,
-    "total": 26
-  }
+  ]
 }
